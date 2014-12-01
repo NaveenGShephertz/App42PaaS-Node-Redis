@@ -1,4 +1,4 @@
-App42PaaS-Node-Redis
+App42Pass-Node-Redis
 ====================
 
-App42PaaS Node sample with Redis
+Sample app for testing Node.js and Redis on Shephertz's App42 PaaS 

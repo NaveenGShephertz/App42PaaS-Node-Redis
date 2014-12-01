@@ -1,0 +1,37 @@
+html
+	head
+		title!=title
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css')
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
+	body
+		div.container
+			div.row
+				div.col-md-2
+				div.col-md-8
+					div.jumbotron
+						h1 Hello, world!
+						p.
+							This is very basic clone of Reddit	
+					form.form-horizontal(role="form", action="/submit", method="post")
+						div.form-group
+							label(for="url" class="col-sm-2 control-label") URL
+							div.col-sm-10
+								input(type="text" class="form-control" id="url" name="url" placeholder="URL")
+						div.form-group
+							label(for="tags" class="col-sm-2 control-label") Tags
+							div.col-sm-10
+								input(type="text" class="form-control" id="tags" name="tags" placeholder="Tags")
+						div.form-group
+							div(class = "col-sm-offset-2 col-sm-10")
+								button(type="submit" class="btn btn-primary") Submit
+					hr
+					div.urlList
+						each url in urls
+							div(class="panel panel-primary")
+								div(class="panel-body")
+									a(href="#{url.url}", target="_blank") #{url.title}
+								div(class="panel-footer")
+									=url.tags
+				div.col-md-2
