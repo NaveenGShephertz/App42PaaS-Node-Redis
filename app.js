@@ -3,7 +3,7 @@ var redis = require('redis')
 var request = require('request')
 var cheerio = require('cheerio')
 
-var client = redis.createClient(52221,"54.213.93.154", {auth_pass : "anoqxyqqw0j028bzlc0opq1vmn8cfrts"})
+var client = redis.createClient(64873,"54.213.93.154", {auth_pass : "aclci2ings5bj1upzbwkdemg2clhzydr"})
 //var client = redis.createClient();
 
 var redisSaveLink = function(url, title, tags, callback){
